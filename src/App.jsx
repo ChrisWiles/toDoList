@@ -9,12 +9,15 @@ class App extends Component {
     this.state = {
       data: []
     }
+    this.handleRemove = this.handleRemove.bind(this)
+    this.addTodo = this.addTodo.bind(this)
   }
   // Add todo handler
   addTodo(val) {
     // Assemble data
     const todo = {
       text: val,
+      id: Math.random()
     }
     // Update data
     this.state.data.push(todo);
@@ -40,8 +43,8 @@ class App extends Component {
           <h2>App</h2>
         </div>
         {/* <Title/> */}
-        <TodoForm addTodo={this.addTodo.bind(this)}/>
-        <TodoList todos={this.state.data} remove={this.handleRemove.bind(this)}/>
+        <TodoForm addTodo={this.addTodo}/>
+        <TodoList todos={this.state.data} remove={this.handleRemove}/>
       </div>
     );
   }
