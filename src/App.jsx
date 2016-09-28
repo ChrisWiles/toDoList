@@ -38,13 +38,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <h2>App</h2>
+      <div className="container">
+        <div className="row">
+          <div className="App-header">
+            <h2 className="text-center">App</h2>
+          </div>
+          <div className="col-md-offset-2 col-md-8">
+            <TodoForm addTodo={this.addTodo}/>
+            <TodoList todos={this.state.data} remove={this.handleRemove}/>
+          </div>
         </div>
-        {/* <Title/> */}
-        <TodoForm addTodo={this.addTodo}/>
-        <TodoList todos={this.state.data} remove={this.handleRemove}/>
       </div>
     );
   }

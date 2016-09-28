@@ -4,15 +4,17 @@ const TodoForm = ({addTodo}) => { //  destructured
   // Input tracker
   let input;
 
+  const handleClick = () => {
+    addTodo(input.value);
+    input.value = '';
+  }
+
   return (
     <div className="form-group">
       <input className="form-control" ref={node => input = node}/>
-      <button className="btn btn-default" onClick={() => {
-        addTodo(input.value);
-        input.value = '';
-      }}>
-        Add
-      </button>
+      <span className="input-group-btn">
+        <button className="btn btn-default" onClick={handleClick}>Add</button>
+      </span>
     </div>
   );
 };
