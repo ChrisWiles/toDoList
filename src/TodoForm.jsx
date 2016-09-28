@@ -5,13 +5,13 @@ const TodoForm = ({addTodo}) => { //  destructured
   let input;
 
   return (
-    <div>
-      <input ref={node => input = node}/>
-      <button onClick={() => {
+    <div className="form-group">
+      <input className="form-control" ref={node => input = node}/>
+      <button className="btn btn-default" onClick={() => {
         addTodo(input.value);
         input.value = '';
       }}>
-        +
+        Add
       </button>
     </div>
   );
