@@ -6,9 +6,7 @@ const TodoForm = ({addTodo}) => { //  destructured
 
   return (
     <div>
-      <input ref={node => {
-        input = node;
-      }}/>
+      <input ref={node => input = node}/>
       <button onClick={() => {
         addTodo(input.value);
         input.value = '';
