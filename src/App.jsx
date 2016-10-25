@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
-import TodoForm from './TodoForm';
-import TodoList from './TodoList';
-import './App.css';
+import React, {Component} from 'react'
+import TodoForm from './TodoForm'
+import TodoList from './TodoList'
+import './App.css'
 
 class App extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       data: []
     }
@@ -20,20 +20,20 @@ class App extends Component {
       id: Math.random()
     }
     // Update data
-    this.state.data.push(todo);
+    this.state.data.push(todo)
     // Update state
-    this.setState({data: this.state.data});
+    this.setState({data: this.state.data})
   }
   // Handle remove
   handleRemove(id) {
     // Filter all todos except the one to be removed
     const remainder = this.state.data.filter((todo) => {
       if (todo.id !== id)
-        return todo;
+        return todo
       }
-    );
+    )
     // Update state with filter
-    this.setState({data: remainder});
+    this.setState({data: remainder})
   }
 
   render() {
@@ -49,8 +49,8 @@ class App extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

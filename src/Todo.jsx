@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Todo = ({todo, remove}) => {
   // Each Todo
@@ -10,7 +10,7 @@ const Todo = ({todo, remove}) => {
         </li>
       </p>
     </h5>
-  );
+  )
 }
 
-export default Todo;
+export default Todo

@@ -1,5 +1,5 @@
-import React from 'react';
-import Todo from './Todo';
+import React from 'react'
+import Todo from './Todo'
 
 const TodoList = ({todos, remove}) => {
   // Map through the todos
@@ -11,10 +11,10 @@ const TodoList = ({todos, remove}) => {
         remove={remove}
       />
     )
-  });
+  })
   return (
     <ul>{todoNode}</ul>
-  );
+  )
 }
 
-export default TodoList;
+export default TodoList

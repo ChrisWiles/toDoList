@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
 const TodoForm = ({addTodo}) => { //  destructured
   // Input tracker
-  let input;
+  let input
 
   const handleClick = () => {
-    addTodo(input.value);
-    input.value = '';
+    addTodo(input.value)
+    input.value = ''
   }
 
   return (
@@ -16,7 +16,7 @@ const TodoForm = ({addTodo}) => { //  destructured
         <button className="btn btn-default" onClick={handleClick}>Add</button>
       </span>
     </div>
-  );
-};
+  )
+}
 
-export default TodoForm;
+export default TodoForm
